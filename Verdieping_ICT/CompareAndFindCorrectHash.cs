@@ -9,7 +9,8 @@ namespace Verdieping_ICT
         {
             return GenerateSha256Hash.IsValid(input, hash, isSalted);
         }
-
+        
+        // Maakt en retuneerd een object met de gebruikte input string en de gegeneerde hash.
         public static InputOutputModel GenerateRandomHash(bool isSalted)
         {
             var strInput = GenerateRandomString();
@@ -17,7 +18,8 @@ namespace Verdieping_ICT
             
             return new InputOutputModel(){InputString = strInput, OutputHash = hashOutput};
         }
-
+           
+         // Genereer een random input string voor hash
         private static string GenerateRandomString()
         {
             

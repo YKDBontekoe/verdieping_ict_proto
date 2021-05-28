@@ -50,7 +50,7 @@ namespace Verdieping_ICT
             var pbkdf2 = new Rfc2898DeriveBytes(testPassword, origSalt, origIterations);
             var testHash = pbkdf2.GetBytes(24);
             
-            
+            // Returneert true als ze gelijk zijn en false als dat niet zo is
             return Convert.ToBase64String(testHash).Equals(origHash);
         }
     }
